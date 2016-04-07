@@ -88,3 +88,29 @@ section {
   text-align: center;
   padding: 50px 20%;
 }
+
+/*
+ * Style for lists
+ */
+.large-numbers {
+  list-style-type: none;
+  counter-reset: list-number-counter;
+
+  li {
+    position: relative;
+    padding-bottom: 24px;
+    padding-left: 30px;
+    font-size: 20px;
+  }
+
+  > li:before {
+    content: counter(list-number-counter);
+    counter-increment: list-number-counter;
+    position: absolute;
+    left: 0;
+    top: -6px;
+    font-weight: bold;
+    font-size: 36px;
+  }
+
+}
