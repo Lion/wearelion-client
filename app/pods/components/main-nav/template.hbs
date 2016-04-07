@@ -1,1 +1,22 @@
-{{yield}}
+<div class="global-nav">
+
+  <div class="container">
+    <nav class="navbar navbar-lion">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Lion</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>{{#link-to "why"}}Why Lion{{/link-to}}</li>
+        <li>{{#link-to "blog"}}Blog{{/link-to}}</li>
+      </ul>
+    </nav>
+  </div>
+  
+</div>

@@ -1,0 +1,47 @@
+.index {
+
+  .banner {
+    background: $roaring-red url("../images/red-tile-pattern.png") repeat center top;
+    color: $white-lion;
+
+    .brand {
+      padding-top: 30px;
+      font-size: 52px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .summary {
+      padding: 40px 0;
+      font-size: 60px;
+      line-height: 100px;
+      font-weight: 100;
+      text-align: center;
+    }
+
+    .cta {
+      padding: 40px 0;
+      text-align: center;
+    }
+  }
+
+  .intro {
+    padding-top: 80px;
+    font-size: 38px;
+    font-weight: 100;
+    position: relative;
+
+    .logo {
+      background: url("../images/lion-logo.svg") no-repeat center top;
+      top: -45px;
+      display: block;
+      height: 101px;
+      margin-left: -44px;
+      left: 50%;
+      position: absolute;
+      width: 88px;
+    }
+  }
+
+}

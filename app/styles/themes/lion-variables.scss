@@ -1,0 +1,45 @@
+/*
+ * Default variables for Lion
+ */
+
+/*
+ * Colours
+ */
+$roaring-red: #db434e;
+$roaring-red-darker: darken($roaring-red, 15%);
+$white-lion: #f3f3f3;
+$white-lion-faded: #c3c3c3;
+$black-lion: #777;
+
+/*
+ * Typography
+ */
+$font-family-sans-serif: proxima-nova-1, proxima-nova-2, proxima-nova, Arial, sans-serif;
+$text-color: $black-lion;
+$font-size-base: 16px;
+
+/*
+ * Components
+ */
+$border-radius-small: 1px;
+$border-radius-base: 2px;
+
+/*
+ * Layout
+ */
+$grid-gutter-width: 0;
+
+/*
+ * Navbar
+ */
+$navbar-border-radius: 0;
+$nav-link-hover-bg: transparent;
+$navbar-height: 50px;
+$link-hover-decoration: none;
+$link-color: $black-lion;
+
+/*
+ * Buttons
+ */
+$btn-default-border: $roaring-red;
+$btn-default-color: $roaring-red;
