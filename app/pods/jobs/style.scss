@@ -38,4 +38,32 @@
     }
   }
 
+  .dos-and-donts {
+    font-size: 20px;
+
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .dos,
+    .donts {
+      padding: 30px 30px;
+      margin: 5px;
+      color: $white-lion;
+    }
+
+    .dos {
+      background-color: $night-red;
+    }
+
+    .donts {
+      background-color: $hyena-brown;
+    }
+  }
+
 }
