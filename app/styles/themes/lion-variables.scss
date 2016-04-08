@@ -6,7 +6,11 @@
  * Colours
  */
 $roaring-red: #db434e;
-$roaring-red-darker: darken($roaring-red, 15%);
+$roaring-red-darker: #a8333c;
+$night-red: #5b1c21;
+$hyena-brown: #5b373a;
+$pink-flamingo: #e1888f;
+
 $white-lion: #f3f3f3;
 $white-lion-faded: #c3c3c3;
 $black-lion: #777;
@@ -17,6 +21,8 @@ $black-lion: #777;
 $font-family-sans-serif: proxima-nova-1, proxima-nova-2, proxima-nova, Arial, sans-serif;
 $text-color: $black-lion;
 $font-size-base: 16px;
+$font-size-h2: floor(($font-size-base * 2.5));
+$font-size-h3: floor(($font-size-base * 1.5));
 
 /*
  * Components
