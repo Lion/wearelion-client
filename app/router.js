@@ -6,7 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('blog');
+  this.route('blog', function() {
+    this.route('converting-an-existing-site-to-ember');
+  });
   this.route('why');
   this.route('jobs');
   this.route('contact');
