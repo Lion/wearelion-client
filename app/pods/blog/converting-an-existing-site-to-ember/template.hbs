@@ -1,1 +1,61 @@
-{{outlet}}
+<div class="blog">
+
+  <div class="container-fluid">
+    <section class="banner">
+      <div class="row">
+        <div class="col-xs-12">
+          <img class="img-responsive center-block" src="images/blog/ll-website-snapshot.jpg" alt="Snapshot of Longleat Website April 2016">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="container">
+    <section class="blog-content">
+      <div class="logo"></div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Converting an existing site to ember</h1>
+          <p class="post-details">Posted: 9 April 2015, Peter Laughton</p>
+          <p>One of our favourite customers, Longleat (an English stately home and safari park that is one of the UK's most popular attractions) had requested us to rebuild their website. The primary goal was to express their new branding (they had moved from a disneyesque branding) with the secondary goal to make the website fully responsive.</p>
+          <p>The website had been very successful, and functioned both as an informational site for people wanting to get more information about Longleat (to plan their day etc) as well as acting as an e-commerce site for buying tickets.</p>
+          <p>Interestingly the number of mobile visitors had passed the 50% mark by mid-2014. Conversion rates on mobile were signficantly below that of desktop, so we felt that getting a robust technical solution for mobile was important.</p>
+          <h3>The existing site</h3>
+          <p>The existing site had grown over four years to the point where it was the primary source of all ticket purchases. The site was built on Expression Engine with a customised e-commerce overlay. The Longleat e-commerce requirements are complex, with some tickets subject to complex availability rules, and that could only be purchased in conjunction with other tickets.</p>
+          <img class="pull-right" src="/images/blog/ll-old-website.jpg">
+          <p>There were some really complex availability algorithms, especially on the game drives. Essentially there were a limited number of vehicles, each with a specific number of seats. These were not necessarily logically avaiable, so if there were two seats still available on the first vehicle, and someone booked six tickets, the e-commerce system has to then book these in one block on a second vehicle. The system would then have to back fill these empty seats if smaller bookings occurred.</p>
+          <p>The site was typically being updated three to four times a day with new marketing information, pricing, key information messages and so on.</p>
+          <p>The site worked well - and had an excellent availability (which is pretty crucial on a high volume e-commerce site) - but had a number of issues:
+            <ul>
+              <li>Finding out where to change information was taking 5-10 minutes per change. Some information was stored as an EE data field, some in an EE template and some on dedicated pages.</li>
+              <li>The deployment process was taking 15-20 minutes. With the number of changes we were spending 240 man hours a year just on deploying changes.</li>
+              <li>Similar information was scattered across the site (it may appear as a note in the times page, as text on a landing page and as a banner on the home page). This led to inconcistent changes, reliant on people remembering where to change things.</li>
+              <li>The existing code base was not designed for the enterprise-level site that Longleat had become. And coding styles and disciplines had evolved significantly in the life of the site (it is amazing how that code that looked so slick four years ago, now looked dated and a poor example of how to do things).</li>
+            </ul>
+          </p>
+          <h3>The new site</h3>
+          <p>The new site was designed to be fully responsive, and was to include all functionality of the existing site. With the exception of news stories, the Expression Engine templates were primarily being updated by us, so the need to make new pages updateable through a CMS had fallen away.</p>
+          <p>The new site did include a number of new features such as being able to sort attractions by route or popularity, the inclusion of being able to like an attraction to influence its popularity rating and the inclusion of dynamic information (such as opening times) throughout the site.</p>
+          <p>The new site was to be staged, with some sections only to be redesigned after the core site launch. We would have to be able to run the 'new' site and the old site simultaneously.</p>
+          <h3>Why Ember?</h3>
+          <p>We loved using Ember but initially rejected it for a number of reasons:
+            <ol>
+              <li>We felt that creating the new site in Ember would take longer. We thought that we would struggle to sell the advantage of this extra time to our client.</li>
+              <li>We were concerned about our in-house resource. We thought that Ember would be challenging for other team members to learn and thus restrict the number of people that we could bring to develop the site.</li>
+              <li>We were concerned about the SEO impact of a single page application. The majority of the sites visitors were being sourced from search engines.</li>
+            </ol>
+          </p>
+          <p>However the highly opinionated code that Ember forces makes Ember such a good framework for large enterprise situations. It would mean that another person can rapidly pick up and develop on the site. We kept on coming back to this especially after working on some rather horrendous Wordpress-based sites with spaghetti addons that constantly crashed.</p>
+          <p>Also, as we used Ember on several other projects, we realised that the ease of training issue we <i>thought</i> applied to Ember was in fact not the case. Indeed, because things are generally consistent, a new team member could quickly learn to work on the Ember sites in a manner that was consistent with our company code style - if anything they were faster on the Ember sites than on a PHP site in a framework they already had lots of experience with.</p>
+          <p>We also realised that coding in Ember was not going to take longer than Expression Engine. Indeed, we ended up taking one day to add the attraction like functionality and would have had to spend 3-4 days struggling with EE to do the same.</p>
+          <p>Finally we noticed that an existing small Ember site was successfully crawled by the google bot. This and the potential of fast-boot meant that we felt confident from an SEO point of view that Ember could deliver (indeed, some of the cool addons would facilitate us applying better meta tags). We realised we would be an early adopter of fast boot but as we were not going to be reliant on complex additional javascript and other addon's.</p>
+          <h3>Back end</h3>
+          <p>We have also re-ingineered the back end API to use Laravel. Rails (or perhaps Phoenix) would be our preferred tech for the API, but the existince of Expression Engine wrappers for Laravel and Laravel's ability to quickly build models from an existing database (contrast to Rails, which is primarily designed to start a database from scratch).</p>
+          <h3>Implementation</h3>
+          <p>So all-in-all we decided to implement Longleat's new site in Ember. We are using ember-cli-deploy and fast boot.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>

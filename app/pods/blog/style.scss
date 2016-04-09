@@ -1,0 +1,21 @@
+.blog {
+
+  section.banner {
+    padding: 0;
+  }
+
+  .post-details {
+    font-style: italic;
+    border-bottom: $hyena-brown 1px solid
+  }
+
+  .blog-content {
+    img {
+      margin: 10px 0 10px 15px;
+    }
+  }
+
+  p, li {
+    text-align: left;
+  }
+}
